@@ -7,14 +7,15 @@
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #2d2d2d;
-    --accent-color: #e63946;
-    --accent-warm: #d62828;
-    --light-bg: #f8f9fa;
+    --accent-color: #2d7c3a;
+    --accent-dark: #1e5a2b;
+    --accent-light: #3a9a4a;
+    --light-bg: #f0f8f4;
     --dark-text: #1a1a1a;
     --light-text: #505050;
     --border-color: #e0e0e0;
     --white: #ffffff;
-    --success: #00d084;
+    --success: #2d7c3a;
 }
 
 html {
@@ -39,11 +40,11 @@ body {
 .navbar {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
-    padding: 18px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 8px 32px rgba(230, 57, 70, 0.15);
+    box-shadow: 0 8px 32px rgba(45, 124, 58, 0.15);
     backdrop-filter: blur(10px);
 }
 
@@ -53,20 +54,33 @@ body {
     align-items: center;
 }
 
-.logo h1 {
-    font-size: 26px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.logo-text h1 {
+    font-size: 20px;
     margin-bottom: 2px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--white);
 }
 
 .tagline {
     font-size: 11px;
-    color: var(--accent-color);
+    color: var(--accent-light);
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -88,7 +102,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
+    color: var(--accent-light);
 }
 
 .nav-links a::after {
@@ -98,7 +112,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-warm));
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
     transition: width 0.3s ease;
 }
 
@@ -124,8 +138,8 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(230, 57, 70, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(214, 40, 40, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(45, 124, 58, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(58, 154, 74, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -143,7 +157,7 @@ body {
 }
 
 .hero-content .accent-text {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -182,14 +196,14 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     color: var(--white);
-    box-shadow: 0 8px 24px rgba(230, 57, 70, 0.3);
+    box-shadow: 0 8px 24px rgba(45, 124, 58, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(230, 57, 70, 0.4);
+    box-shadow: 0 12px 32px rgba(45, 124, 58, 0.4);
 }
 
 .btn-secondary {
@@ -227,7 +241,7 @@ section h2 {
     font-size: 48px;
     margin-bottom: 20px;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--accent-dark);
     font-weight: 800;
     letter-spacing: -0.5px;
 }
@@ -257,7 +271,7 @@ section .subtitle {
 
 .about-text h3 {
     font-size: 32px;
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 20px;
     font-weight: 800;
 }
@@ -272,7 +286,7 @@ section .subtitle {
 .about-image {
     width: 100%;
     height: 400px;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
@@ -307,7 +321,7 @@ section .subtitle {
 }
 
 .value-card h3 {
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: 800;
@@ -329,7 +343,7 @@ section .subtitle {
 
 .service-group h3 {
     font-size: 32px;
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 50px;
     text-align: center;
     font-weight: 800;
@@ -342,7 +356,7 @@ section .subtitle {
 }
 
 .service-card {
-    background: linear-gradient(135deg, var(--light-bg) 0%, rgba(248, 249, 250, 0.5) 100%);
+    background: linear-gradient(135deg, var(--light-bg) 0%, rgba(240, 248, 244, 0.5) 100%);
     padding: 40px;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -358,7 +372,7 @@ section .subtitle {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;
@@ -374,7 +388,7 @@ section .subtitle {
 }
 
 .service-card h4 {
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 800;
@@ -412,7 +426,7 @@ section .subtitle {
     position: absolute;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-warm));
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
     top: 25px;
     left: 50%;
     z-index: 0;
@@ -428,7 +442,7 @@ section .subtitle {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     color: var(--white);
     border-radius: 50%;
     font-size: 26px;
@@ -436,11 +450,11 @@ section .subtitle {
     margin-bottom: 25px;
     position: relative;
     z-index: 1;
-    box-shadow: 0 8px 24px rgba(230, 57, 70, 0.3);
+    box-shadow: 0 8px 24px rgba(45, 124, 58, 0.3);
 }
 
 .step h3 {
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 800;
@@ -465,7 +479,7 @@ section .subtitle {
     list-style: none;
     max-width: 700px;
     margin: 40px auto;
-    background: linear-gradient(135deg, var(--light-bg) 0%, rgba(248, 249, 250, 0.5) 100%);
+    background: linear-gradient(135deg, var(--light-bg) 0%, rgba(240, 248, 244, 0.5) 100%);
     padding: 40px;
     border-radius: 12px;
 }
@@ -494,7 +508,7 @@ section .subtitle {
 }
 
 .opportunity-form {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 100%);
     padding: 50px;
     border-radius: 12px;
     max-width: 600px;
@@ -580,7 +594,7 @@ form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
     background: var(--white);
-    box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
+    box-shadow: 0 0 0 4px rgba(45, 124, 58, 0.1);
 }
 
 form textarea {
@@ -617,7 +631,7 @@ form textarea {
 }
 
 .contact-card h3 {
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: 800;
@@ -645,7 +659,7 @@ form textarea {
 }
 
 .contact-form h3 {
-    color: var(--primary-color);
+    color: var(--accent-dark);
     margin-bottom: 30px;
     text-align: center;
     font-size: 26px;
@@ -667,7 +681,7 @@ form textarea {
 
 .footer p:last-child {
     margin-bottom: 0;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-warm) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -679,6 +693,15 @@ form textarea {
     .navbar .container {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 50px;
     }
 
     .nav-links {
